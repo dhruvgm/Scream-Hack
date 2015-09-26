@@ -1,1 +1,79 @@
-<html></html>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- US -->
+  <style>
+  	body {
+  		background-color:black;
+  	}
+  	#container {
+  		position:absolute;
+  		left:50%;
+  		top:40%;
+  		height:50px;
+  		width:600px;
+  		margin-left:-300px;
+  		margin-top:-50px;
+  	}
+   p {
+   		font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;;
+  		color:white;
+  		font-size: 40px;
+  		text-align: center;
+  		opacity: 0;
+  		transition: opacity 5s ease;
+  	}
+  	button {
+  		border:2px #770000 solid;
+  		border-radius:5px;
+  		font-family: Arial;
+  		font-weight:100;
+  		background-color:#990000;
+  		font-size:20px;
+  		color:white;
+  		position: absolute;
+  		width: 150px;
+  		margin-left: -75px;
+  		left: 50%;
+  		padding-top: 15px;
+  		padding-bottom: 15px;
+  		opacity: 0;
+  		transition: opacity 5s ease;
+  	}
+  	button:focus {
+  		outline: none;
+  	}
+  	.text-load {
+  		opacity: 1;
+  	}
+  </style>
+  <script type="text/javascript">
+
+  window.onload = function() {
+  	document.querySelectorAll('p')[0].classList.add('text-load');
+  	
+  	var callback = function() {
+  		var btn = document.querySelectorAll('button')[0];
+  		btn.classList.add('text-load');
+  		btn.addEventListener('click', function() {
+  			document.location = 'http://screamarium.com/scream.html';
+  		});
+  	};
+
+  	setTimeout(callback, 1250);
+
+  	
+  
+}
+  </script>
+</head>
+
+<body>
+	<div id="container">
+	<p>Welcome to Screamarium</p> 
+	<button>
+		Enter
+	</button>
+</div>
+</body>
+</html>
