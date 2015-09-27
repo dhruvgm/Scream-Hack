@@ -7,20 +7,6 @@ body {
   		color: white;
   	}
   	
-  	/*#vidcontainer {
-  		width: 100%;
-  	}*/
-  	
-  	#button1{
-  		position: absolute;
-  		left: 10%;
-  		top:20%;
-  	}
-  	#button2{
-  		position: absolute;
-  		left: 10%;
-  		top:40%;
-  	}
   	#container {
   		position:absolute;
   		left:45%;
@@ -60,7 +46,9 @@ body {
   		font-size:20px;
   		color:white;
   		width: 200px;
+  		height: 70px;
 		margin-left: 5px;
+		text-align: center;
 
   		padding-top: 10px;
   		padding-bottom: 10px;
@@ -123,7 +111,7 @@ body {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
   }
-button >#enter {
+/*button >#enter {
   		border:2px #770000 solid;
   		border-radius:5px;
   		font-family: Arial;
@@ -139,4 +127,4 @@ button >#enter {
   		padding-bottom: 15px;
   		opacity: 0;
   		transition: opacity 5s ease;
-  	}
+  	}*/
