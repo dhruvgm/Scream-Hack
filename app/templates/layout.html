@@ -2,9 +2,18 @@
 <html>
 <head>
   <title>Screamarium</title>    
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">;
-  	<script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
-  	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/protStyle.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/prototype.js') }}"></script>
+	
+	<script type="text/javascript" src="http://p.jwpcdn.com/6/10/jwplayer.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vidStyle.css') }}">
+ 	
+	<script type="text/javascript" src="{{ url_for('static', filename='js/videoPage.js') }}"></script>
+
+  
+{% block header %}
+{% endblock %}  	
   	
 </head>
 

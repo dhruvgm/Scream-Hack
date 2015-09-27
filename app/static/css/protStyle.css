@@ -1,7 +1,7 @@
 body {
   		background-color:black;
   	}
-  	#container {
+  	#container1 {
   		position:absolute;
   		left:50%;
   		top:40%;
@@ -9,6 +9,18 @@ body {
   		width:600px;
   		margin-left:-300px;
   		margin-top:-50px;
+  	}
+  	
+  	h1 {
+  		font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;;
+  		color:white;
+  		font-size: 40px;
+  		text-align: center;
+  		opacity: 0;
+  		transition: opacity 5s ease;
+  	
+  	
+  	
   	}
    p {
    		font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;;

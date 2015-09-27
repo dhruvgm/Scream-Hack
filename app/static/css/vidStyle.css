@@ -1,0 +1,142 @@
+body {
+  		background-color:black;
+  		color: white;
+  	}
+  	
+  	a{
+  		color: white;
+  	}
+  	
+  	/*#vidcontainer {
+  		width: 100%;
+  	}*/
+  	
+  	#button1{
+  		position: absolute;
+  		left: 10%;
+  		top:20%;
+  	}
+  	#button2{
+  		position: absolute;
+  		left: 10%;
+  		top:40%;
+  	}
+  	#container {
+  		position:absolute;
+  		left:45%;
+  		top:30%;
+  		height:50px;
+  		width:1500px;
+  		margin-left:-300px;
+  		margin-top:-50px;
+  	}
+  
+  	h1 {
+  		font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;;
+  		color:white;
+  		font-size: 40px;
+  		text-align: center;
+  		opacity: 0;
+  		transition: opacity 5s ease;
+  	
+  	
+  	
+  	}
+  	
+   p {
+   		font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;;
+  		color:white;
+  		font-size: 40px;
+  		text-align: center;
+  		opacity: 0;
+  		transition: opacity 5s ease;
+  	}
+  	#button, #submit {
+  		border:2px #770000 solid;
+  		border-radius:5px;
+  		font-family: Arial;
+  		font-weight:100;
+  		background-color:#990000;
+  		font-size:20px;
+  		color:white;
+  		width: 200px;
+		margin-left: 5px;
+
+  		padding-top: 10px;
+  		padding-bottom: 10px;
+  		/*opacity: 0;*/
+  		transition: opacity 5s ease;
+  	}
+  	button:focus {
+  		outline: none;
+  	}
+  	.text-load {
+  		opacity: 1;
+  	}
+  	
+  	/* WebKit and Opera browsers */
+  @-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
+  
+  #stage {
+    margin: 1em auto;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+
+ #spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  #spinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+button >#enter {
+  		border:2px #770000 solid;
+  		border-radius:5px;
+  		font-family: Arial;
+  		font-weight:100;
+  		background-color:#990000;
+  		font-size:20px;
+  		color:white;
+  		position: absolute;
+  		width: 150px;
+  		margin-left: -75px;
+  		left: 50%;
+  		padding-top: 15px;
+  		padding-bottom: 15px;
+  		opacity: 0;
+  		transition: opacity 5s ease;
+  	}

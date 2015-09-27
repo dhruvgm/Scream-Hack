@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+	<p>Screamarium</p> 
+	
+	
+	
+	<button id="button" >
+		Spooky Time
+	</button>
+	
+	
+	
+	<div id="container">Loading...</div>
+	
+	<div id="stage" style="padding-left: 180px; height: 160px;">
+<div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+<img style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px;" src="image1.jpg" width="200" height="160" alt="">
+<img style="-webkit-transform: rotateY(-72deg) translateX(180px); padding: 0 0 0 147px;" src="image2.jpg" width="213" height="160" alt="">
+<img style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 120px;" src="image3.jpg" width="240" height="160" alt="">
+<img style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 147px;" src="image4.jpg" width="213" height="160" alt="">
+<img style="-webkit-transform: rotateY(-288deg) translateX(180px); padding: 0 0 0 122px;" src="image5.png" width="238" height="160" alt="">
+</div>
+</div>
+	
+	
+	
+	<script type='text/javascript'>
+	
+		 
+		//playlist
+			var playerInstance = jwplayer('container');
+			playerInstance.setup({
+				playlist: 
+					"https://content.jwplatform.com/feeds/nT62wioO.rss",
+				width: 680,
+				height: 400,
+				autostart: true,
+				controls: false,
+				dock: false,
+				icons: false,
+				logo: false,
+				repeat: "always",
+				shuffle: true
+				
+			});
+			
+			//randomize
+		</script>
+		<script>
+		function randomPl(id){
+			return function(){
+				var playlist = jwplayer(id).getPlaylist();
+				var playlistsize = playlist.length;
+				var randomnumber=Math.floor(Math.random()*playlistsize);
+				jwplayer(id).playlistItem(randomnumber);
+			}
+		}
+		
+		
+		
+		var player = jwplayer(0).id;
+		jwplayer(player).onComplete(randomPl(player));
+		
+		
+		//trying to add video
+		function addVideo() {
+		alert("lol");
+		var inp = document.getElementById('input').value;
+        var playlist = playerInstance.getPlaylist();
+        var newItem = {
+            file: inp
+        };
+        playlist.push(newItem);
+        playerInstance.load(playlist);
+    }
+		
+		
+</script>
+<br>
+<input type="text" name="url" value ="" id="input" width = "200px"><br>
+<input type="submit" value="Add Your Scream" onclick="return addVideo()" id="submit">
+
+{% endblock %}
