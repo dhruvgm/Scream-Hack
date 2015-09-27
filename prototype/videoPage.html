@@ -58,7 +58,7 @@
   		opacity: 0;
   		transition: opacity 5s ease;
   	}
-  	/*button {
+  	button, #submit {
   		border:2px #770000 solid;
   		border-radius:5px;
   		font-family: Arial;
@@ -66,18 +66,17 @@
   		background-color:#990000;
   		font-size:20px;
   		color:white;
-  		position: absolute;
-  		width: 150px;
-		margin-left: -75px;
-		left: 50%;
-  		padding-top: 15px;
-  		padding-bottom: 15px;
-  		opacity: 0;
+  		width: 200px;
+		margin-left: 5px;
+
+  		padding-top: 10px;
+  		padding-bottom: 10px;
+  		/*opacity: 0;*/
   		transition: opacity 5s ease;
   	}
   	button:focus {
   		outline: none;
-  	}*/
+  	}
   	.text-load {
   		opacity: 1;
   	}
@@ -142,6 +141,8 @@
   	
   	var callback = function() {
   		var btn = document.querySelectorAll('button')[0];
+  		var sub = document.getElementById("submit");
+  		sub.classList.add('text-load');
   		btn.classList.add('text-load');
   		btn.addEventListener('click', function() {
   			//$(#container).hide();
@@ -174,7 +175,7 @@
 	
 	
 	<button id="button" >
-		Enter
+		Spooky Time
 	</button>
 	
 	
@@ -241,8 +242,8 @@
 		
 </script>
 <br>
-<input type="text" name="url" value ="" id="input"><br>
-<input type="submit" value="Add your own video!" onclick="return addVideo()">
+<input type="text" name="url" value ="" id="input" width = "200px"><br>
+<input type="submit" value="Add Your Scream" onclick="return addVideo()" id="submit">
 <script>
 var function =addVideo() {
 		alert("lol");
