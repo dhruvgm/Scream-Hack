@@ -7,6 +7,11 @@
   <style>
   	body {
   		background-color:black;
+  		color: white;
+  	}
+  	
+  	a{
+  		color: white;
   	}
   	
   	/*#vidcontainer {
@@ -194,6 +199,8 @@
 	
 	
 	<script type='text/javascript'>
+	
+		 
 
 			var playerInstance = jwplayer('container');
 			playerInstance.setup({
@@ -223,10 +230,31 @@
 			}
 		}
 		
+		
+		
 		var player = jwplayer(0).id;
 		jwplayer(player).onComplete(randomPl(player));
+		
+		
+		//trying to add video
+		
+		
 </script>
-	
+<br>
+<input type="text" name="url" value ="" id="input"><br>
+<input type="submit" value="Add your own video!" onclick="return addVideo()">
+<script>
+var function =addVideo() {
+		alert("lol");
+		var in = document.getElementById('input').value;
+        var playlist = playerInstance.getPlaylist();
+        var newItem = {
+            file: in
+        };
+        playlist.push(newItem);
+        playerInstance.load(playlist);
+    }
+    </script>
 
 </body>
 </html>
